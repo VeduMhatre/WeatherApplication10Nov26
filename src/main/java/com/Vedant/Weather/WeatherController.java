@@ -18,7 +18,7 @@ public class WeatherController{
 	}
 	
 	private final Map<String, Long> requestTimestamps = new ConcurrentHashMap<>();
-	@PostMapping("/get-weather")
+	@GetMapping("/get-weather")
 	public Mono<Map<String,String>> getWeather(@RequestParam double latitude, @RequestParam double longitude, HttpServletRequest request){
 
 
